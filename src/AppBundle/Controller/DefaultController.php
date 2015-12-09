@@ -8,6 +8,7 @@ use AppBundle\Form\ParticipantType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use GuzzleHttp\Client;
 
 class DefaultController extends Controller
 {
@@ -32,11 +33,6 @@ class DefaultController extends Controller
             $message->body = 'Coucou ! Tu es bien inscrit pour les meilleurs 30 minutes de TA VIE!';
 
             $response = $messageBird->messages->create($message);
-
-            if ($response) {
-                dump($response);
-            }
-
 
             return $this->redirectToRoute('success');
         }
