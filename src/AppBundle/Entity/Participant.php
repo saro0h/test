@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -33,6 +34,7 @@ class Participant
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\Regex("/33(6|7)[0-9]{8}/", message="Tu dois respecter le format 33(6|7)xxxxxxxx. Exemple: 33782922697")
      */
     public $phoneNumber;
 
