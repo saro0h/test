@@ -1,16 +1,40 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+  <div class="formInscription">
     <div class="row">
-        <div class="col-md-4 col-md-offset-5">
+        <div class="col-xs-12">
+            <!-- A DEVELOPPER -->
+            <p class="leftInscription">80 inscriptions restantes</p>
+            <!-- END A DEVELOPPER -->
             {{ form_start(form) }}
             {{ form_widget(form) }}
+            <div class="checkbox">
+              <input type="checkbox" id="alcoholOptin">
+              <label for="alcoholOptin">Tu bois ?</label>
+            </div>
 
-            <div class="text-center">
-                <button type="submit" class="btn btn-warning">On y va !</button>
+            <div class="row submitButton">
+
+              <div class="col-xs-12 col-md-6">
+                <!-- A DEVELOPPER - A laisser vide si pas d'erreur. Laisser la div. -->
+                <p>
+                  <strong>Erreur</strong>
+                </p>
+                <!-- A DEVELOPPER -->
+                <p>
+                  Intitulé de l'erreur Intitulé de l'erreur Intitulé de l'erreur Intitulé de l'erreur 
+                </p>
+                <!-- END A DEVELOPPER -->
+                <!-- END A DEVELOPPER -->
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <button type="submit" class="btn btn-warning">Valider</button>
+              </div>
             </div>
             {{ form_end(form) }}
         </div>
     </div>
+  </div>
 
 {% endblock %}

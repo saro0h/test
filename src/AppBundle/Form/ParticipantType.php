@@ -14,13 +14,15 @@ class ParticipantType extends AbstractType
     {
         $builder
             ->add('firstname', TextType::class, array(
-                'label' => 'Ton prénom'
+                'attr' => array('placeholder' => 'Ton prénom'),
+                'label' => false
             ))
             ->add('lastname', TextType::class, array(
-                'label' => 'Ton nom de famille'
+                'attr' => array('placeholder' => 'Ton nom'),
+                'label' => false
             ))
-            ->add('phoneNumber', TextType::class, array('label' => 'Ton numéro de téléphone', 'attr' => array('placeholder' => 'Ex: 33782922697')))
-            ->add('alcoholOptin', CheckboxType::class, array('label' => 'Tu bois ?', 'required' => false))
+            ->add('phoneNumber', TextType::class, array('attr' => array('placeholder' => '33782922697'),'label' => false))
+            // ->add('alcoholOptin', CheckboxType::class, array('label' => 'Tu bois ?', 'required' => false))
         ;
     }
 
