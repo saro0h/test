@@ -8,7 +8,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity
  * @ORM\Table(name="participant")
- * @UniqueEntity("fullname", message="Ce nom est déjà enregistré.")
+ * @UniqueEntity("firstname", message="Ce prénom est déjà enregistré.")
+ * @UniqueEntity("lastname", message="Ce nom est déjà enregistré.")
  * @UniqueEntity("phoneNumber", message="Ce numéro de téléphone est déjà enregistré.")
  */
 class Participant
@@ -23,7 +24,12 @@ class Participant
     /**
      * @ORM\Column(type="string")
      */
-    public $fullname;
+    public $firstname;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    public $lastname;
 
     /**
      * @ORM\Column(type="string")

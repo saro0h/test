@@ -13,10 +13,13 @@ class ParticipantType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('fullname', TextType::class, array(
-                'label' => 'Ton nom complet'
+            ->add('firstname', TextType::class, array(
+                'label' => 'Ton prénom'
             ))
-            ->add('phoneNumber', TextType::class, array('label' => 'Ton numéro de téléphone'))
+            ->add('lastname', TextType::class, array(
+                'label' => 'Ton nom de famille'
+            ))
+            ->add('phoneNumber', TextType::class, array('label' => 'Ton numéro de téléphone', 'attr' => array('placeholder' => 'Ex: 33782922697')))
             ->add('alcoholOptin', CheckboxType::class, array('label' => 'Tu bois ?', 'required' => false))
         ;
     }
