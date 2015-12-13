@@ -17,6 +17,12 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $participantsLeft = Participant::TOTAL - $this->getDoctrine()->getRepository('AppBundle:Participant')->getTotalCount();
+
+        if (0 === $participantsLeft) {
+            return $this->redirectToRoute('over');
+        }
+
         $participant = new Participant();
         $form = $this->createForm(ParticipantType::class, $participant);
 
@@ -39,7 +45,7 @@ class DefaultController extends Controller
 
         return $this->render('default/index.html.twig', array(
             'form' => $form->createView(),
-            'participantsLeft' => Participant::TOTAL - $this->getDoctrine()->getRepository('AppBundle:Participant')->getTotalCount(),
+            'participantsLeft' => $participantsLeft,
         ));
     }
 
@@ -49,5 +55,13 @@ class DefaultController extends Controller
     public function successAction()
     {
         return $this->render('default/success.html.twig');
+    }
+
+    /**
+     * @Route("/over", name="over")
+     */
+    public function overAction()
+    {
+        return $this->render('default/over.html.twig');
     }
 }
