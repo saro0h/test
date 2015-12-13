@@ -14,11 +14,11 @@ class ParticipantType extends AbstractType
     {
         $builder
             ->add('firstname', TextType::class, array(
-                'attr' => array('placeholder' => 'Ton prénom'),
+                'attr' => array('placeholder' => 'Votre prénom'),
                 'label' => false
             ))
             ->add('lastname', TextType::class, array(
-                'attr' => array('placeholder' => 'Ton nom'),
+                'attr' => array('placeholder' => 'Votre nom'),
                 'label' => false
             ))
             ->add('phoneNumber', TextType::class, array('attr' => array('placeholder' => '33782922697'),'label' => false))
