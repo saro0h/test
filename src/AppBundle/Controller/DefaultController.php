@@ -30,7 +30,7 @@ class DefaultController extends Controller
             $message = new \MessageBird\Objects\Message();
             $message->originator = 'MessageBird';
             $message->recipients = array($participant->phoneNumber);
-            $message->body = 'Coucou ! Tu es bien inscrit pour les meilleurs 30 minutes de TA VIE!';
+            $message->body = "Tu es bien inscrit pour les meilleurs 30 minutes de TA VIE ! N'oublie pas ton téléphone le 17 décembre.";
 
             $response = $messageBird->messages->create($message);
 

@@ -1,58 +1,15 @@
 {% extends 'base.html.twig' %}
 
+{% form_theme form _self %}
+
 {% block body %}
   <div class="formInscription">
-<!--
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="intro">
-              Qu’importe les flacons pourvu qu’on ait l’ivresse. Mais avant cela il vous faut partager quelques confidences…
-            </p>
-            <p class="leftInscription">80 inscriptions restantes</p>
-            {{ form_start(form) }}
-            {{ form_widget(form) }}
-            <div class="checkbox">
-              <input type="checkbox" id="alcoholOptin">
-              <label for="alcoholOptin">Vous buvez ?</label>
-            </div>
-
-            <div class="row submitButton">
-
-              <div class="col-xs-12 col-md-6">
-                <p>
-                  <strong>Erreur</strong>
-                </p>
-                <p>
-                  Intitulé de l'erreur Intitulé de l'erreur Intitulé de l'erreur Intitulé de l'erreur
-                </p>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <button type="submit" class="btn btn-warning">Valider</button>
-              </div>
-            </div>
-            {{ form_end(form) }}
-        </div>
-    </div>
--->
       <div class="row">
           <div class="col-xs-12">
-              <p class="leftInscription">80 inscriptions restantes</p>
+              <p class="leftInscription">{{ participantsLeft }} inscriptions restantes</p>
               {{ form_start(form) }}
-                  {{ form_row(form.firstname) }}
-                  {{ form_row(form.lastname) }}
-                  {{ form_row(form.phoneNumber) }}
-                  <div class="checkbox">
-                      <input type="checkbox" id="alcoholOptin" required="false">
-                      <label for="alcoholOptin">Tu bois ?</label>
-                  </div>
+                  {{ form_widget(form) }}
                   <div class="row submitButton">
-                       <div class="col-xs-12 col-md-6">
-                           <p><strong>Erreur</strong></p>
-                         <p>
-                             Intitulé de l'erreur Intitulé de l'erreur Intitulé de l'erreur Intitulé de l'erreur
-                         </p>
-                       </div>
-
                        <div class="col-xs-12 col-md-6">
                            <button type="submit" class="btn btn-warning">Valider</button>
                        </div>
@@ -61,4 +18,11 @@
           </div>
       </div>
   </div>
+{% endblock %}
+
+{% block _participant_alcoholOptin_row %}
+    <div class="checkbox">
+        <input type="checkbox" id="alcoholOptin">
+        <label for="alcoholOptin">Tu bois ?</label>
+    </div>
 {% endblock %}
