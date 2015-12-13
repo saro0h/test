@@ -38,7 +38,8 @@ class DefaultController extends Controller
         }
 
         return $this->render('default/index.html.twig', array(
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'participantsLeft' => Participant::TOTAL - $this->getDoctrine()->getRepository('AppBundle:Participant')->getTotalCount(),
         ));
     }
 

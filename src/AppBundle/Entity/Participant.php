@@ -7,7 +7,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\ParticipantRepository")
  * @ORM\Table(name="participant")
  * @UniqueEntity("firstname", message="Ce prénom est déjà enregistré.")
  * @UniqueEntity("lastname", message="Ce nom est déjà enregistré.")
@@ -15,6 +15,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Participant
 {
+    const TOTAL = 80;
     /**
      * @ORM\Column(type="integer")
      * @ORM\Id
@@ -39,7 +40,7 @@ class Participant
     public $phoneNumber;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     public $alcoholOptin;
 }

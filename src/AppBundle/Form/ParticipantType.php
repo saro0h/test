@@ -22,7 +22,6 @@ class ParticipantType extends AbstractType
                 'label' => false
             ))
             ->add('phoneNumber', TextType::class, array('attr' => array('placeholder' => '33782922697'),'label' => false))
-            // ->add('alcoholOptin', CheckboxType::class, array('label' => 'Tu bois ?', 'required' => false))
         ;
     }
 
