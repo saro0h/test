@@ -25,11 +25,13 @@ class Participant
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Déclinez votre identité! Quel est votre prénom ?")
      */
     public $firstname;
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Déclinez votre identité! Quel est votre nom de famille ?")
      */
     public $lastname;
 
