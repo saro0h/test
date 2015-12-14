@@ -38,6 +38,7 @@ class Participant
     /**
      * @ORM\Column(type="string")
      * @Assert\Regex("/33(6|7)[0-9]{8}/", message="Tu dois respecter le format 33(6|7)xxxxxxxx. Exemple: 33782922697")
+     * @Assert\NotBlank(message="Nous devons pouvoir vous contacter ! Quel est votre numéro de téléphone.")
      */
     public $phoneNumber;
 
