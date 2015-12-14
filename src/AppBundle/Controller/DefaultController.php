@@ -36,7 +36,7 @@ class DefaultController extends Controller
             $message = new \MessageBird\Objects\Message();
             $message->originator = 'MessageBird';
             $message->recipients = array($participant->phoneNumber);
-            $message->body = sprintf("Cher %s,\nPartagez avec nous les enchantements des effluves subtiles. Le soir venu vous recevrez la clé pour nous rejoindre. Gardez sous silence cette dernière pour préserver votre invitation.", $participant->firstname);
+            $message->body = sprintf("Cher (Chère) %s,\nPartagez avec nous les enchantements des effluves subtiles. Le soir venu vous recevrez la clé pour nous rejoindre. Gardez sous silence cette dernière pour préserver votre invitation.", $participant->firstname);
 
             $response = $messageBird->messages->create($message);
 
