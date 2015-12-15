@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Entity\ParticipantRepository")
  * @ORM\Table(name="participant")
- * @UniqueEntity(fields={"firstname", "lastname", "phonenumber"}, errorPath="firstname", message="Vous prenez déjà part à l'aventure.")
+ * @UniqueEntity(fields={"firstname", "lastname", "phoneNumber"}, errorPath="firstname", message="Vous prenez déjà part à l'aventure.")
  */
 class Participant
 {
