@@ -1,6 +1,6 @@
 group2:
   heure_d_envoi: 20:40
-  heure_sur_sms: 21:00
+  heure_sur_sms: 21:05
   names:
     60: Oursin
     11: Lamentin
@@ -13,7 +13,7 @@ group2:
     63: Crevette
 group3:
   heure_d_envoi: 21:10
-  heure_sur_sms: 21:30
+  heure_sur_sms: 21:35
   names:
     15: Whiskey
     40: Jin
@@ -26,7 +26,7 @@ group3:
     19: Scotch
 group4:
   heure_d_envoi: 21:40
-  heure_sur_sms: 22:00
+  heure_sur_sms: 22:05
   names:
     82: Bensouss
     6: Prune
@@ -39,7 +39,7 @@ group4:
     67: Ocre
 group5:
   heure_d_envoi: 22:10
-  heure_sur_sms: 22:30
+  heure_sur_sms: 22:35
   names:
     74: Beethoven
     30: Bach
@@ -52,7 +52,7 @@ group5:
     53: Wagner
 group6:
   heure_d_envoi: 22:40
-  heure_sur_sms: 23:00
+  heure_sur_sms: 23:05
   names:
     21: Acier
     1: Papier
@@ -66,7 +66,7 @@ group6:
     42: Argent
 group7:
   heure_d_envoi: 23:10
-  heure_sur_sms: 23:30
+  heure_sur_sms: 23:35
   names:
     54: Obama
     34: Washington
@@ -80,7 +80,7 @@ group7:
     62: Ford
 group8:
   heure_d_envoi: 23:40
-  heure_sur_sms: 00:00
+  heure_sur_sms: 00:05
   names:
     14: Tango
     20: Bravo

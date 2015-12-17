@@ -40,7 +40,7 @@ Toute transmission de ce message annule l'entrée.", 'sarah', $password, $heure)
 
                     $this->writeln(sprintf("Send SMS to: %s.\nSMS sent: %s", $user->getFirstname(), $user->getLastname(), $message->body));
 
-                    //$response = $messageBird->messages->create($message);
+                    $response = $messageBird->messages->create($message);
                 }
 
             }
