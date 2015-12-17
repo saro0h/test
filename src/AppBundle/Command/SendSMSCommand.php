@@ -23,6 +23,7 @@ class SendSMSCommand extends ContainerAwareCommand
             $date = new \DateTime('now');
             //if ($date->format('G:i') == $group['heure_d_envoi'] ) {
                 foreach($group['names'] as $id => $password) {
+                    echo "$id\n";
                     $user = $this->getContainer()->get('doctrine')->getRepository('AppBundle:Participant')->findOneById($id);
 
                     $messageBird = new \MessageBird\Client($this->getContainer()->getParameter('msgbird-token'));
@@ -35,7 +36,7 @@ class SendSMSCommand extends ContainerAwareCommand
                     $message->body = sprintf("%s, il est l'heure.\n
 Ce soir, vous êtes \"%s\".\n
 Salle Event, %s. Suivez les affiches et ne soyez pas en retard, les portes ne s'ouvriront qu'une fois.\n
-Toute transmission de ce message annule l'entrée.", 'sarah', $password, $heure);
+Toute transmission de ce message annule l'entrée.", $user->firstname, $password, $heure);
 
                     $output->writeln(sprintf("Send SMS to: %s.\nSMS sent: %s", $user->firstname, $user->lastname, $message->body));
 
