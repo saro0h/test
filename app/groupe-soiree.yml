@@ -1,0 +1,93 @@
+group2:
+  heure_d_envoi: 20:40
+  heure_sur_sms: 21:00
+  names:
+    60: Oursin
+    11: Lamentin
+    45: Marsouin
+    73: Dauphin
+    43: ConcombreDeMer
+    16: Palourde
+    28: Langouste
+    8: Bulot
+    63: Crevette
+group3:
+  heure_d_envoi: 21:10
+  heure_sur_sms: 21:30
+  names:
+    15: Whiskey
+    40: Jin
+    71: Absinthe
+    65: Vodka
+    58: Rhum
+    31: Tequila
+    10: Sambuca
+    23: Geraldine
+    19: Scotch
+group4:
+  heure_d_envoi: 21:40
+  heure_sur_sms: 22:00
+  names:
+    82: Bensouss
+    6: Prune
+    81: Saumon
+    57: Aubergine
+    36: Crème
+    49: Ecru
+    32: Ivoire
+    68: Argent
+    67: Ocre
+group5:
+  heure_d_envoi: 22:10
+  heure_sur_sms: 22:30
+  names:
+    74: Beethoven
+    30: Bach
+    77: Vivaldi
+    61: Mozart
+    38: Chopin
+    66: Debussy
+    17: Schubert
+    18: Brahms
+    53: Wagner
+group6:
+  heure_d_envoi: 22:40
+  heure_sur_sms: 23:00
+  names:
+    21: Acier
+    1: Papier
+    37: Cuivre
+    75: Etain
+    39: Beton
+    56: Pierre
+    7: Granite
+    9: Ardoise
+    26: Laiton
+    42: Argent
+group7:
+  heure_d_envoi: 23:10
+  heure_sur_sms: 23:30
+  names:
+    54: Obama
+    34: Washington
+    70: Jefferson
+    46: Madison
+    41: Jackson
+    12: Bush
+    44: Clinton
+    5: Reagan
+    59: Interdit
+    62: Ford
+group8:
+  heure_d_envoi: 23:40
+  heure_sur_sms: 00:00
+  names:
+    14: Tango
+    20: Bravo
+    13: Alpha
+    2: Sierra
+    76: Charlie
+    3: Delta
+    22: Epsilon
+    24: Yankee
+    25: King

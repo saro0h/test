@@ -8,7 +8,7 @@ use AppBundle\Form\ParticipantType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use GuzzleHttp\Client;
+
 
 class DefaultController extends Controller
 {
