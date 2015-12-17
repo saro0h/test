@@ -37,7 +37,7 @@ Ce soir, vous êtes \"%s\".\n
 Salle Event, %s. Suivez les affiches et ne soyez pas en retard, les portes ne s'ouvriront qu'une fois.\n
 Toute transmission de ce message annule l'entrée.", 'sarah', $password, $heure);
 
-                    $this->writeln(sprintf("Send SMS to: %s.\nSMS sent: %s", $user->getFirstname(), $user->getLastname(), $message->body));
+                    $output->writeln(sprintf("Send SMS to: %s.\nSMS sent: %s", $user->getFirstname(), $user->getLastname(), $message->body));
 
                     //$response = $messageBird->messages->create($message);
                 }
