@@ -22,7 +22,7 @@ class SendSMSCommand extends ContainerAwareCommand
         foreach($array as $group) {
             $date = new \DateTime('now');
 
-            if ($date->format('G:i') === '20:40') {
+            if ($date->format('G:i') === $group['heure_d_envoi'] ) {
                 foreach($group['names'] as $id => $password) {
                     $user = $this->getContainer()->get('doctrine')->getRepository('AppBundle:Participant')->findOneById($id);
 
@@ -38,7 +38,7 @@ Ce soir, vous êtes \"%s\".\n
 Salle Event, %s. Suivez les affiches et ne soyez pas en retard, les portes ne s'ouvriront qu'une fois.\n
 Toute transmission de ce message annule l'entrée.", 'sarah', $password, $heure);
 
-                    dump($message->body); die;
+                    $this->writeln(sprintf("Send SMS to: %s.\nSMS sent: %s", $user->getFirstname(), $user->getLastname(), $message->body));
 
                     //$response = $messageBird->messages->create($message);
                 }
